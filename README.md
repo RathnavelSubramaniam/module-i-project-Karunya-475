@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/D94-Q8ry)
 
 
-# Stock Price & Sentiment Prediction
+# AI-Driven Financial News Sentiment Analysis & Stock Market Prediction
 
 An end-to-end data science project designed to predict stock market trends using historical price data and stock news sentiment analysis.
 
