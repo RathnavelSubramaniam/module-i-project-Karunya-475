@@ -26,6 +26,39 @@ The preprocessing pipeline cleans and aligns historical market data with news se
 * **Feature Scaling & Date Alignment**: Standardized numerical stock metrics (Open, High, Low, Close, Volume) using `MinMaxScaler` and merged them with sentiment scores by date.
 * **Sequential Train-Test Split**: Divided the dataset chronologically to preserve the time-series order and prevent data leakage.
 
+
+### Tech Stack & Requirements
+
+This project relies on Python 3.12+ and key machine learning, deep learning, and NLP libraries:
+* Core & Data Handling: numpy==1.26.4, pandas==2.2.2, scipy==1.13.1
+* Machine Learning: scikit-learn==1.6.1
+* NLP & Text Embeddings: gensim==4.3.3, sentence-transformers==3.4.1, transformers
+* Deep Learning Frameworks: torch>=1.11.0, tensorflow / keras
+* Visualization: matplotlib, seaborn
+
+ ### Model Pipeline & Workflow
+
+### 1. Data Preprocessing & EDA:
+
+* Handled temporal variables (Date parsed to datetime64).
+* Evaluated null values, duplicates, and feature distributions across prices, volume, and labels.
+* Performed univariate analysis on sentiment polarity classes.
+
+### 2. Feature Engineering & Text Representation:
+
+* Word2Vec (gensim): Extracted dense word vector representations from news text.
+* Sentence Transformers (sentence-transformers): Generated context-aware sentence-level embeddings.
+* LLM Summarization / Tokens: Integrated T5 model tokenizer/pipelines for text processing.
+
+### 3. Model Development & Classification:
+
+* Random Forest Classifier (scikit-learn): Non-linear baseline classification on feature matrices.
+* Neural Networks (Keras/TensorFlow): Sequential Dense architecture with Dropout regularization for sentiment classification and stock trend modeling.
+
+### 4. Evaluation Metrics:
+
+* Accuracy, Precision, Recall, F1-Score, and Confusion Matrix.
+
 ### Conclusion
 
 * Successfully combined quantitative stock metrics with news sentiment analysis to predict market trends.
